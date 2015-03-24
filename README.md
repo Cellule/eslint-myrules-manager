@@ -44,9 +44,7 @@ The module must be named `eslint-myrules` and must export
       global: ["lib"]
     },
     modifiers: {
-      frontend: {
-        react: true // can be anything, will be passed directly to your function
-      }
+      react: true // can be anything, will be passed directly to your function
     }
   }
 }
