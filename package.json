@@ -8,7 +8,7 @@
   },
   "main": "index.js",
   "bin": {
-    "eslint-myrules": "./bin/eslint.js"
+    "eslint-myrules": "./bin/proxy.js"
   },
   "scripts": {
     "lint": "node bin/eslint.js lint --debug"
