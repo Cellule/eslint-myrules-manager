@@ -1,0 +1,28 @@
+{
+  targets: {
+    global: [
+      "lib"
+    ],
+    backend: [
+      "tests/backend"
+    ],
+    frontend: [
+      "tests/frontend"
+    ],
+    customTarget: [
+      "tests/customTarget"
+    ]
+  },
+  extraRules: {
+    backend: {
+      rules: {
+        "no-shadow": 1
+      }
+    },
+    global: {
+      rules: {
+        "no-new": 2
+      }
+    }
+  }
+}

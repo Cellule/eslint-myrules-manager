@@ -1,0 +1,32 @@
+{
+  "name": "eslint-myrules-manager",
+  "version": "1.0.0",
+  "description": "Copies your rules and runs eslint on your project",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "main": "index.js",
+  "bin": {
+    "eslint-myrules": "./bin/eslint.js"
+  },
+  "scripts": {
+    "lint": "node bin/eslint.js lint --debug"
+  },
+  "author": "Michael Ferris",
+  "dependencies": {
+    "async": "^0.9.0",
+    "babel-eslint": "^2.0.2",
+    "commander": "^2.7.1",
+    "eslint": "^0.17.1",
+    "eslint-plugin-react": "^1.5.0",
+    "eslint-plugin-shadow-exception": "^1.1.0",
+    "js-beautify": "^1.5.5",
+    "json5": "^0.4.0",
+    "lodash.merge": "^3.0.3",
+    "lodash.toarray": "^3.0.0"
+  },
+  "peerDependencies": {
+    "eslint-myrules": "*"
+  }
+}
