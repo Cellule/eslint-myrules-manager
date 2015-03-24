@@ -4,7 +4,7 @@
   "description": "Copies your rules and runs eslint on your project",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Cellule/eslint-myrules-manager"
   },
   "main": "index.js",
   "bin": {
@@ -27,6 +27,5 @@
     "lodash.toarray": "^3.0.0"
   },
   "peerDependencies": {
-    "eslint-myrules": "*"
   }
 }
