@@ -27,7 +27,8 @@ Currently supported options
       "global": {
         // any valid .eslintrc config
       }
-    }
+    },
+    "options": String // extra options to pass to eslint
   }
 }
 ```

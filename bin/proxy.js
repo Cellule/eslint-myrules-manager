@@ -1,11 +1,19 @@
 #!/usr/bin/env node
-var child_process = require("child_process");
+var childProcess = require("child_process");
 var path = require("path");
 
-process.env.NODE_PATH = path.resolve(__dirname, "../../eslint-myrules/node_modules");
+var isWindows = process.platform === "win32";
+var splitter = isWindows ? ";" : ":";
+var nodePath = path.resolve(__dirname, "../../eslint-myrules/node_modules");
+if(process.env.NODE_PATH) {
+  process.env.NODE_PATH = process.env.NODE_PATH + splitter + nodePath;
+} else {
+  process.env.NODE_PATH = nodePath;
+}
+
 // Hack because there is no way to change NODE_PATH at runtime
 // changing it does nothing since it is used only when node bootstraps
-child_process.fork(
+childProcess.fork(
   path.resolve(__dirname, "eslint.js"),
   process.argv.slice(2, process.argv.length),
   {
