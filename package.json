@@ -1,6 +1,6 @@
 {
   "name": "eslint-myrules-manager",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Copies your rules and runs eslint on your project",
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
   "author": "Michael Ferris",
   "dependencies": {
     "async": "^0.9.0",
-    "commander": "^2.7.1",
+    "commander": "^2.8.0",
     "eslint": "^0.18.0",
     "js-beautify": "^1.5.5",
     "json5": "^0.4.0",
