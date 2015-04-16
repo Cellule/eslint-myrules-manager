@@ -29,12 +29,15 @@ Currently supported options
       }
     },
     "options": String // extra options to pass to eslint
+    "mergeGlobal": String|String[]
   }
 }
 ```
 - `eslint-myrules`: the name of this project. If you rename the project, make sure to change this
   - `targets`: list of different targets for your rules. Can be empty if you simply want 1 set of rules. However, very useful if you want to override some rules.
   - `modifiers`: see [MODIFIERS](lib/modifiers/MODIFIERS.md)
+  - `extraRules`: Include any project specific configuration you want to pass to eslint.
+  - `mergeGlobal`: list of targets you want to merge with global rules to be placed at the root of your project. Useful when your whole project needs to be lint with a specific target.
 
 You can see an example at [.myrulesrc](.myrulesrc)
 
