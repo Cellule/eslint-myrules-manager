@@ -2,7 +2,10 @@
 var childProcess = require("child_process");
 var path = require("path");
 
-var nodePath = path.join(__dirname, "../../eslint-myrules/node_modules");
+var nodePath = path.join(
+  process.cwd(),
+  "node_modules/eslint-myrules/node_modules"
+);
 if(process.env.NODE_PATH) {
   var isWindows = process.platform === "win32";
   var splitter = isWindows ? ";" : ":";
