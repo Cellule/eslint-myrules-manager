@@ -7,9 +7,8 @@ The goal of copying the rules is to allow IDE integration to find your rules, li
 ## Installation
 
 ```bash
-$ npm install eslint-myrules-manager cellule/eslint-myrules --save-dev
+$ npm install eslint-myrules-manager --save-dev
 ```
-Change `cellule/eslint-myrules` for your own repository with your rules.
 
 ## Config file
 You can configure the tool in your package.json or package.json5 or in a `.myrulesrc` file.
@@ -44,7 +43,11 @@ You can see an example at [.myrulesrc](.myrulesrc)
 
 ## Linting
 You can run this tool on your project to lint your sources. It uses ESLint for code style and error check. See [ESLint](http://eslint.org/docs/rules/) for details about the rules.
+
 ### Usage
+No binary is provided with this library. You have to make your own, but the api comes with a command line parser.
+See [cliWrapper](https://github.com/Cellule/eslint-myrules/blob/master/cliWrapper) for an example on how to correctly execute the cli.
+
 ```bash
 $ eslint-myrules lint -h
   Usage: lint [options] [...global_folders]
@@ -89,10 +92,16 @@ This will execute the linter in
 - frontend folder `js`
 - folder `bin` and file `index.js`
 
-## Your plugin
-You must install your plugin for your rule to interact with this module.
-The module must be named `eslint-myrules` and must export
+## Api
 
+- `execute`: (myrules, argv) => void
+  - `myrules`: Configuration of your rules, see below for example
+  - `argv`: cli options, should come directly from `process.argv`
+- `utils`: Object
+  - `mergeConfigs`: (config1, config2) => config; Merge 2 eslint configuration object together and return the result.
+
+
+### Configuration object
 ```js
 {
   targetsPath: {
