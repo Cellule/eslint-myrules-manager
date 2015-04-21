@@ -1,15 +1,12 @@
 {
   "name": "eslint-myrules-manager",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "Copies your rules and runs eslint on your project",
   "repository": {
     "type": "git",
     "url": "https://github.com/Cellule/eslint-myrules-manager"
   },
   "main": "index.js",
-  "bin": {
-    "eslint-myrules": "./bin/proxy.js"
-  },
   "scripts": {
     "lint": "node bin/eslint.js lint --debug"
   },
@@ -17,11 +14,12 @@
   "dependencies": {
     "async": "^0.9.0",
     "commander": "^2.8.0",
-    "eslint": "^0.18.0",
     "js-beautify": "^1.5.5",
     "json5": "^0.4.0",
-    "lodash.merge": "^3.1.0",
-    "lodash.isarray": "^3.0.0"
+    "lodash.isarray": "^3.0.0",
+    "lodash.merge": "^3.1.0"
   },
-  "peerDependencies": {}
+  "peerDependencies": {
+    "eslint": ">=0.16.0"
+  }
 }
