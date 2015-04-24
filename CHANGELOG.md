@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.2.2
+- Fix: Modifiers were not applied at all.
+
+## v0.2.1
+- Fix: Fix bug in npm publish.
+
 ## v0.2.0
 - Breaking: eslint-myrules is no longer a plugin. Instead, you have to make your own binary and call eslint-myrules-manager execute function by passing your rules. See https://github.com/Cellule/eslint-myrules for an example.
 - Breaking: eslint is now a peerDependency. You need to install it in your project for it to be available for the manager.

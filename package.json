@@ -1,6 +1,6 @@
 {
   "name": "eslint-myrules-manager",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "Copies your rules and runs eslint on your project",
   "repository": {
     "type": "git",
