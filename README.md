@@ -117,8 +117,8 @@ This will execute the linter in
       modifierName: function(modifierConfig, rules, target) => updatedRules
     }
   },
-  // Options to pass to ESLint
-  eslintOptions: "--ext .js --ext .jsx" //default value,
+  // Extensions that ESLint will look for
+  extensions: [".js", ".jsx"], //default value,
   // Default configuration of your rules to be merged with given config
   defaultConfig: {}
 }
@@ -138,7 +138,7 @@ This will execute the linter in
       react: require("./modifiers/react")
     }
   },
-  eslintOptions: "--ext .js --no-color",
+  extensions: [".js"],
   defaultConfig: {
     targets: {
       global: ["lib"]
