@@ -27,7 +27,11 @@ Currently supported options
         // any valid .eslintrc config
       }
     },
-    "options": String // extra options to pass to eslint
+    "cliOptions": {
+      "formatter": String,
+      // All options to eslint cliEngine are available
+      // see http://eslint.org/docs/developer-guide/nodejs-api.html#cliengine
+    }
     "mergeGlobal": String|String[]
   }
 }
@@ -37,6 +41,7 @@ Currently supported options
   - `modifiers`: see [MODIFIERS](lib/modifiers/MODIFIERS.md)
   - `extraRules`: Include any project specific configuration you want to pass to eslint.
   - `mergeGlobal`: list of targets you want to merge with global rules to be placed at the root of your project. Useful when your whole project needs to be lint with a specific target.
+  - `cliOptions.formatter`: Name or path to formatter see [Formatter](http://eslint.org/docs/developer-guide/nodejs-api.html#getformatter)
 
 You can see an example at [.myrulesrc](.myrulesrc)
 

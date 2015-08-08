@@ -1,11 +1,12 @@
 {
   "name": "eslint-myrules-manager",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Copies your rules and runs eslint on your project",
   "repository": {
     "type": "git",
     "url": "https://github.com/Cellule/eslint-myrules-manager"
   },
+  "license": "MIT",
   "main": "index.js",
   "scripts": {
     "lint": "eslint ."

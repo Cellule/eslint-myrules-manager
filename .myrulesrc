@@ -3,9 +3,7 @@
     global: [
       "lib"
     ],
-    backend: [
-      "tests/backend"
-    ],
+    backend: "tests/backend",
     frontend: [
       "tests/frontend"
     ],
