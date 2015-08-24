@@ -42,6 +42,7 @@ Currently supported options
   - `extraRules`: Include any project specific configuration you want to pass to eslint.
   - `mergeGlobal`: list of targets you want to merge with global rules to be placed at the root of your project. Useful when your whole project needs to be lint with a specific target.
   - `cliOptions.formatter`: Name or path to formatter see [Formatter](http://eslint.org/docs/developer-guide/nodejs-api.html#getformatter)
+    - You can use `cliConfig` instead of `cliOptions`
 
 You can see an example at [.myrulesrc](.myrulesrc)
 

@@ -1,6 +1,6 @@
 {
   "name": "eslint-myrules-manager",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Copies your rules and runs eslint on your project",
   "repository": {
     "type": "git",
@@ -22,5 +22,8 @@
   },
   "peerDependencies": {
     "eslint": ">=1.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^4.0.10"
   }
 }

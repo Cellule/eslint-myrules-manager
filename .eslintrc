@@ -5,19 +5,7 @@
     "node": true
   },
   "globals": {},
-  "plugins": ["shadow-exception"],
   "rules": {
-    "shadow-exception/no-shadow": [2, {
-      "exceptions": {
-        "err": true,
-        "next": true,
-        "callback": true,
-        "cb": true,
-        "res": true,
-        "result": true,
-        "response": true
-      }
-    }],
     "no-shadow": 0,
     "camelcase": 1,
     "curly": [2, "all"],
