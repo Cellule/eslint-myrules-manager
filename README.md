@@ -74,7 +74,7 @@ It then runs the linter and outputs errors.
 
 ```js
 // Config in package.json
-"eslint-myrules: {
+"eslint-myrules": {
   "targets": {
     "backend": ["app", "lib"],
     "frontend": ["js"]
