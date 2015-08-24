@@ -16,7 +16,7 @@ function(config, rules, target) {
 See example [here](https://github.com/Cellule/eslint-myrules/blob/master/modifiers/react/index.js)
 
 The way you export your modifiers reflect how to configurate them.
-For instance your plugin can export 
+For instance your plugin can export
 ```js
 function mod2(config, rules, target) {
   // run modifier2...
@@ -25,28 +25,30 @@ function mod2(config, rules, target) {
 }
 module.exports = {
   modifiers: {
-    target1: {
-      mod1: function(config, rules, target) {
-        target === "target1";
-        return rules;
-      },
-      mod2: mod2,
+    mod1: function(config, rules, target) {
+      target === "target1";
+      return rules;
     },
-    global: {
-      globalMod: function(config, rules, target) {
-        target === "global";
-        return rules;
-      },
-      mod2: mod2
-    }
+    mod2: mod2,
+    globalMod: function(config, rules, target) {
+      target === "global";
+      return rules;
+    },
   },
   defaultConfig: {
     modifiers: {
-      mod1: true,
-      mod2: {
-        str: "string"
+      target1: {
+        mod1: true,
+        mod2: {
+          str: "string"
+        }
       },
-      globalMod: "other Config"
+      global: {
+        globalMod: "other Config".
+        mod2: {
+          str: "global string"
+        }
+      }
     }
   }
 }

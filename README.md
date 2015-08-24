@@ -116,11 +116,8 @@ This will execute the linter in
     ...otherTarget: pathToYourRuleFile
   },
   modifiers: {
-    // List all targets with modifiers
-    targetName: {
-      // list all possible modifiers
-      modifierName: function(modifierConfig, rules, target) => updatedRules
-    }
+    // list all possible modifiers
+    modifierName: function(modifierConfig, rules, target) => updatedRules
   },
   // Extensions that ESLint will look for
   extensions: [".js", ".jsx"], //default value,
@@ -139,9 +136,7 @@ This will execute the linter in
     backend: path.resolve(__dirname, "../rules/backend.eslintrc")
   },
   modifiers: {
-    frontend: {
-      react: require("./modifiers/react")
-    }
+    react: require("./modifiers/react")
   },
   extensions: [".js"],
   defaultConfig: {
@@ -149,7 +144,9 @@ This will execute the linter in
       global: ["lib"]
     },
     modifiers: {
-      react: true // can be anything, will be passed directly to your function
+      frontend: {
+        react: true // can be anything, will be passed directly to your function
+      }
     }
   }
 }

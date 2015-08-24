@@ -1,5 +1,12 @@
 # Changelog
 
+## v0.4.0
+- Breaking: Modifiers configuration and definition structure were swapped. This allows to use already defined modifiers to custom targets at the project level.
+
+## v0.3.0
+- Breaking: Configuration `options` is no longer supported. Instead use `cliOptions` which is an Object matching eslint cli option object, plus formatter.
+- Update: Update eslint to 1.0 and changed usage to the cli engine
+
 ## v0.2.2
 - Fix: Modifiers were not applied at all.
 
